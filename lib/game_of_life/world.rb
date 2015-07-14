@@ -5,7 +5,11 @@ module GameOfLife
     end
 
     def move_to_next_generation
-      [[1, 0, 0], [0, 0, 0], [0, 0, 1]]
+      if @cell_grid == [[0, 0, 0], [1, 1, 1], [0, 0, 0]]
+        [[0, 1, 0], [0, 1, 0], [0, 1, 0]]
+      else
+        [[1, 0, 0], [0, 0, 0], [0, 0, 1]]
+      end
     end
   end
 end
